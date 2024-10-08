@@ -13,7 +13,7 @@ class DvUserRole extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'dv_users_roles_has_dv_users');
+        return $this->belongsToMany(DvUser::class, 'dv_users_roles_has_dv_users', 'dv_users_roles_id', 'dv_users_id');
     }
 }
 
